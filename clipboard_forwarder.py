@@ -2,8 +2,26 @@ import numpy as np
 from selenium import webdriver
 from tkinter import Tk
 from time import time
+import os
+import threading
+
+# "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" -remote-debugging-port=9114 --user-data-dir="D:\SelenTest\Chrome_Test_profile"
+
 
 def open_browser():
+    command = '"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" -remote-debugging-port=9114 --user-data-dir=\"D:\\SelenTest\\Chrome_Test_profile\"'
+    os.system('"' + command + '"')
+
+
+def wait_for_browser(interval=6):
+    time_start = time()
+    while True:
+        if time() - time_start > interval:
+            break
+
+
+
+def open_page():
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_experimental_option("debuggerAddress", "localhost:9114")
     driver = webdriver.Chrome(executable_path=r'chromedriver.exe', options=chrome_options)
@@ -25,14 +43,18 @@ def remove_inconvenient(dialog):
 
 
 def forwarder(interval=1):
-    search_input_box = open_browser()
+    search_input_box = open_page()
     old_dialog = "sofhiudsgf7ieghfuisdgofhdsiuhfdsihjfoisdgiofjsuifhsdoihfyusdghip"
     time_start = time()
     while True:
         time_stop = time()
         if time_stop - time_start > interval:
-            dialog = Tk().clipboard_get()
             print("tick")
+            try:
+                dialog = Tk().clipboard_get()
+            except:
+                continue
+
             if dialog != old_dialog:
                 dialog_cleaned = remove_inconvenient(dialog)
                 search_input_box.clear()
@@ -41,6 +63,15 @@ def forwarder(interval=1):
             time_start = time_stop
 
 
+def forwarder_foyer():
+    t1 = threading.Thread(target=open_browser) 
+    t2 = threading.Thread(target=forwarder) 
+
+    t1.start()
+    t2.start() 
+
+    t1.join()
+    t2.join() 
 
 if __name__ == "__main__":
-    forwarder()
+    forwarder_foyer()
