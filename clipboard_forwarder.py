@@ -2,15 +2,10 @@ import numpy as np
 from selenium import webdriver
 from tkinter import Tk
 from time import time
-import os
 import threading
+import browsers.adapter
 
 # "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" -remote-debugging-port=9114 --user-data-dir="D:\SelenTest\Chrome_Test_profile"
-
-
-def open_browser():
-    command = '"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" -remote-debugging-port=9114"'# --user-data-dir=\"D:\\SelenTest\\Chrome_test_profile\"'
-    os.system('"' + command + '"')
 
 
 def wait_for_browser(interval=6):
@@ -19,15 +14,6 @@ def wait_for_browser(interval=6):
         if time() - time_start > interval:
             break
 
-
-
-def open_page():
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_experimental_option("debuggerAddress", "localhost:9114")
-    driver = webdriver.Chrome(executable_path=r'chromedriver.exe', options=chrome_options)
-    driver.get("https://translate.google.pl/?hl=pl&tab=TT0")  # <---
-    search_input_box = driver.find_element_by_id("source")  # <---
-    return search_input_box
 
 
 def remove_inconvenient(dialog):
@@ -42,8 +28,8 @@ def remove_inconvenient(dialog):
     return dialog_cleaned
 
 
-def forwarder(interval=1):
-    search_input_box = open_page()
+def forwarder(browser, interval=1):
+    search_input_box = browsers.adapter.open_page(browser)
     old_dialog = "sofhiudsgf7ieghfuisdgofhdsiuhfdsihjfoisdgiofjsuifhsdoihfyusdghip"
     time_start = time()
     while True:
@@ -64,8 +50,9 @@ def forwarder(interval=1):
 
 
 def forwarder_foyer():
-    t1 = threading.Thread(target=open_browser) 
-    t2 = threading.Thread(target=forwarder) 
+    browser = "opera"
+    t1 = threading.Thread(target=browsers.adapter.open_browser, args=[browser]) 
+    t2 = threading.Thread(target=forwarder, args=[browser]) 
 
     t1.start()
     t2.start() 
