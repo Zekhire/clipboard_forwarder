@@ -9,7 +9,7 @@ import threading
 
 
 def open_browser():
-    command = '"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" -remote-debugging-port=9114 --user-data-dir=\"D:\\SelenTest\\Chrome_Test_profile\"'
+    command = '"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" -remote-debugging-port=9114"'# --user-data-dir=\"D:\\SelenTest\\Chrome_test_profile\"'
     os.system('"' + command + '"')
 
 
