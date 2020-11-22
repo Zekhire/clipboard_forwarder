@@ -18,7 +18,7 @@ def remove_inconvenient(dialog):
     return dialog_cleaned
 
 
-def forwarder(browsers_data, rem_inc=True, interval=0.25, show=False):
+def forwarder(browsers_data, rem_inc=False, interval=0.25, show=False):
     text_input_box = browsers.adapter.open_page(browsers_data)
     old_dialog = "sofhiudsgf7ieghfuisdgofhdsiuhfdsihjfoisdgiofjsuifhsdoihfyusdghip"
     time_start = time()
