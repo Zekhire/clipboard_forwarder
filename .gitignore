@@ -1,6 +1,8 @@
 # My
 *.exe
 *.jpg
+*.zip
+browsers_data_my.json
 
 
 # Byte-compiled / optimized / DLL files

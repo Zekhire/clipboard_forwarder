@@ -4,7 +4,7 @@
     {
         "path": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
         "port": 9114,
-        "driver": "browsers\\chromedriver\\chromedriver.exe",
-        "profile": "D:\\SelenTest\\Chrome_test_profile\\"
+        "driver": "D:\\cf\\chromedriver\\chromedriver.exe",
+        "profile": "D:\\cf\\chromeprofile\\default\\"
     }
 }
