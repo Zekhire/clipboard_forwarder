@@ -16,5 +16,5 @@ def open_page(opera_dict):
     # driver = webdriver.Opera(options=options, executable_path=r'.\\operadriver\\operadriver.exe')
     driver = webdriver.Opera(options=options, executable_path=opera_dict["driver"])
     driver.get("https://translate.google.pl/?hl=pl&tab=TT0")
-    search_input_box = driver.find_element_by_id("source")
-    return search_input_box
+    text_input_box = driver.find_element_by_id("source")
+    return text_input_box

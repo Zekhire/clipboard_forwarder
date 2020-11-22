@@ -7,10 +7,12 @@ def open_browser(chrome_dict):
 
 
 def open_page(chrome_dict):
+    translator_url = "https://translate.google.pl/?hl=pl&tab=TT0"
+    text_input_tag = "textarea"
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_experimental_option("debuggerAddress", "localhost:9114")
     #driver = webdriver.Chrome(executable_path=r'../chromedriver.exe', options=chrome_options)
     driver = webdriver.Chrome(executable_path=chrome_dict["driver"], options=chrome_options)
-    driver.get("https://translate.google.pl/?hl=pl&tab=TT0")  # <---
-    search_input_box = driver.find_element_by_id("source")  # <---
-    return search_input_box
+    driver.get(translator_url)
+    text_input_box = driver.find_element_by_tag_name(text_input_tag)
+    return text_input_box

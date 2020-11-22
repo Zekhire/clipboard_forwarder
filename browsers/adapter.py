@@ -1,19 +1,19 @@
 import browsers.chrome
 import browsers.opera
-import json
 
-def open_browser(browser):
-    data = json.load(open("./browsers/browsers_data.json"))
+
+def open_browser(browsers_data):
+    browser = browsers_data["browser"]
     if browser == "chrome":
-        browsers.chrome.open_browser(data["chrome"])
+        browsers.chrome.open_browser(browsers_data["chrome"])
     elif browser == "opera":
-        browsers.opera.open_browser(data["opera"])
+        browsers.opera.open_browser(browsers_data["opera"])
 
 
-def open_page(browser):
-    data = json.load(open("./browsers/browsers_data.json"))
+def open_page(browsers_data):
+    browser = browsers_data["browser"]
     if browser == "chrome":
-        search_input_box = browsers.chrome.open_page(data["chrome"])
+        text_input_box = browsers.chrome.open_page(browsers_data["chrome"])
     elif browser == "opera":
-        search_input_box = browsers.opera.open_page(data["opera"])
-    return search_input_box
+        text_input_box = browsers.opera.open_page(browsers_data["opera"])
+    return text_input_box

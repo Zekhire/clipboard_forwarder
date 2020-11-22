@@ -1,7 +1,7 @@
 {
+    "browser":"chrome",
     "chrome":
     {
-        "command": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" -remote-debugging-port=9114",
         "path": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
         "port": 9114,
         "driver": "browsers\\chromedriver\\chromedriver.exe",
