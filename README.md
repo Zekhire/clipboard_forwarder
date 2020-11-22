@@ -9,9 +9,9 @@ Project was created and tested with:
 
 Currently project is working with Google Chrome Browser only.
 
+
 #### Description
 Project created in order to automate process of copy and paste text into google translator. This should be useful especially during reading text in foreign language, when this text is copyable.
-
 
 
 #### Example application
@@ -19,7 +19,7 @@ User can integrate this program with Visual Novel Reader (VNR in short). In orde
 
 
 #### Setup
-- Run command in project catalogue:
+- Run command in clipboard_forwarder\ catalogue:
 ```
 pip install -r requirements.txt
 ```
@@ -29,3 +29,10 @@ pip install -r requirements.txt
 	- Google Chrome browser, 
 	- chromedriver.exe,
 	- copied "default" catalogue
+
+
+#### Run
+Go to clipboard_forwarder\ and run command:
+```
+python clipboard_forwarder.py
+```

@@ -2,7 +2,7 @@ from selenium import webdriver
 import os
 
 def open_browser(chrome_dict):
-    command = chrome_dict["path"]+" -remote-debugging-port="+str(chrome_dict["port"])+" --user-data-dir="+chrome_dict["profile"]
+    command = chrome_dict["browser_path"]+" -remote-debugging-port="+str(chrome_dict["port"])+" --user-data-dir="+chrome_dict["profile"]
     os.system('"' + command + '"')
 
 
