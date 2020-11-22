@@ -15,7 +15,7 @@ Project created in order to automate process of copy and paste text into google 
 
 
 #### Example application
-User can integrate this program with Visual Novel Reader (VNR in short). In order to do that, user need to enable option in VNR to copy dialog text to clipboard, then automatically this text is pasted to Google Translator. This Combination gives user much more translation suggestions than using VNR only. This is much more efficient when read visual novel is written in foreign language (eg. Japanese). Then we recommend to use also translating plug-in to give much more more precised translation suggestions.
+User can integrate this program with Visual Novel Reader (VNR in short). In order to do that, user need to enable option in VNR to copy dialog text to clipboard, then automatically this text is pasted to Google Translator. This Combination gives user much more translation suggestions than using VNR only. This is much more efficient when read visual novel is written in foreign language (e.g. Japanese). Then we recommend to use also translating plug-in to give much more more precised translation suggestions.
 
 
 #### Setup
@@ -23,8 +23,8 @@ User can integrate this program with Visual Novel Reader (VNR in short). In orde
 ```
 pip install -r requirements.txt
 ```
-- Download chromedriver from https://chromedriver.chromium.org/downloads and unpack it into desired catalogue (eg. D:\cf\chromedriver)
-- Copy C:\Users\\[YOUR USERNAME]\AppData\Local\Google\Chrome\User Data\Default catalogue (eg. D:\cf\chromeprofile)
+- Download chromedriver from https://chromedriver.chromium.org/downloads and unpack it into desired catalogue (e.g. D:\cf\chromedriver)
+- Copy C:\Users\\[YOUR USERNAME]\AppData\Local\Google\Chrome\User Data\Default catalogue into desired catalogue (e.g. D:\cf\chromeprofile)
 - Adjust clipboard_forwader\browsers_data.json paths so that indicate paths to:
 	- Google Chrome browser, 
 	- chromedriver.exe,
