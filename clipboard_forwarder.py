@@ -36,10 +36,10 @@ def forwarder(browsers_data, rem_inc=False, interval=0.25, show=False):
 
             if dialog != old_dialog:
                 if rem_inc:
-                    dialog_cleaned = remove_inconvenient(dialog)
+                    dialog = remove_inconvenient(dialog)
 
                 text_input_box.clear()
-                text_input_box.send_keys(dialog_cleaned)    
+                text_input_box.send_keys(dialog)    
                 old_dialog = dialog
 
             time_start = time_stop
