@@ -2,9 +2,9 @@
     "browser":"chrome",
     "chrome":
     {
-        "path": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
-        "port": 9114,
+        "browser_path": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
         "driver": "D:\\cf\\chromedriver\\chromedriver.exe",
-        "profile": "D:\\cf\\chromeprofile\\default\\"
+        "profile": "D:\\cf\\chromeprofile\\default\\",
+        "port": 9114
     }
 }
