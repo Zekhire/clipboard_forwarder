@@ -6,10 +6,5 @@
         "port": 9114,
         "driver": "browsers\\chromedriver\\chromedriver.exe",
         "profile": "D:\\SelenTest\\Chrome_test_profile\\"
-    },
-    "opera":
-    {
-        "driver": "browsers\\operadriver\\operadriver.exe",
-        "profile": "D:\\SelenTest\\Opera_test_profile\\"
     }
 }
