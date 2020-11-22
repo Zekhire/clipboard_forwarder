@@ -24,7 +24,7 @@ User can integrate this program with Visual Novel Reader (VNR in short). In orde
 pip install -r requirements.txt
 ```
 - Download chromedriver from https://chromedriver.chromium.org/downloads and unpack it into desired catalogue (eg. D:\cf\chromedriver)
-- Copy C:\Users\[YOUR USERNAME]\AppData\Local\Google\Chrome\User Data\Default catalogue (eg. D:\cf\chromeprofile)
+- Copy C:\Users\\[YOUR USERNAME]\AppData\Local\Google\Chrome\User Data\Default catalogue (eg. D:\cf\chromeprofile)
 - Adjust clipboard_forwader\browsers_data.json paths so that indicate paths to:
 	- Google Chrome browser, 
 	- chromedriver.exe,
