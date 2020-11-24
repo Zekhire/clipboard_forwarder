@@ -21,6 +21,12 @@ User can integrate this program with Visual Novel Reader (VNR in short). In orde
 #### Setup
 - Run command in clipboard_forwarder\ catalogue:
 ```
+python -m virtualenv venv
+cd venv
+cd Scripts
+activate
+cd ..
+cd ..
 pip install -r requirements.txt
 ```
 - Download chromedriver from https://chromedriver.chromium.org/downloads and unpack it into desired catalogue (e.g. D:\cf\chromedriver)
